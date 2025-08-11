@@ -229,28 +229,39 @@ document.querySelectorAll('.view-btn').forEach(btn => {
       img.onload = () => {
         const fixedHeight = 300; // desired fixed height of container & image
 
-        // Calculate scaled width preserving aspect ratio
-        const scale = fixedHeight / img.naturalHeight;
-        const scaledWidth = img.naturalWidth * scale;
+     
+// Determine max height for images: 300px or half of viewport height, whichever is smaller
+const maxHeight = Math.min(300, window.innerHeight * 0.5);
+// Determine max width for images: 98vw to avoid horizontal overflow
+const maxWidth = window.innerWidth * 0.98;
 
-        // Create wrapper div with dynamic width & fixed height
-        const wrapper = document.createElement('div');
-        wrapper.style.height = fixedHeight + 'px';
-        wrapper.style.width = scaledWidth + 'px';
-        wrapper.style.margin = '20px auto';
-        wrapper.style.border = '2px solid white';
-        wrapper.style.borderRadius = '10px';
-        wrapper.style.overflow = 'hidden';
-        wrapper.style.backgroundColor = '#111';
-        wrapper.style.display = 'flex';
-        wrapper.style.justifyContent = 'center';
-        wrapper.style.alignItems = 'center';
+// Calculate scaled width preserving aspect ratio
+const scale = maxHeight / img.naturalHeight;
+let scaledWidth = img.naturalWidth * scale;
+if (scaledWidth > maxWidth) {
+  // Rescale if width would overflow viewport
+  scaledWidth = maxWidth;
+}
 
-        // Style image to have 100% height, auto width (maintain aspect)
-        img.style.height = fixedHeight + 'px';
-        img.style.width = 'auto';
-        img.style.objectFit = 'contain';
+// Create wrapper div with dynamic width & fixed height
+const wrapper = document.createElement('div');
+wrapper.style.height = maxHeight + 'px';
+wrapper.style.width = scaledWidth + 'px';
+wrapper.style.maxWidth = maxWidth + 'px';
+wrapper.style.margin = '20px auto';
+wrapper.style.border = '2px solid white';
+wrapper.style.borderRadius = '10px';
+wrapper.style.overflow = 'hidden';
+wrapper.style.backgroundColor = '#111';
+wrapper.style.display = 'flex';
+wrapper.style.justifyContent = 'center';
+wrapper.style.alignItems = 'center';
 
+// Style image to have 100% height, auto width (maintain aspect)
+img.style.height = maxHeight + 'px';
+img.style.width = 'auto';
+img.style.maxWidth = '98vw';
+img.style.objectFit = 'contain';
         wrapper.appendChild(img);
 
         // Insert into viewDetails
