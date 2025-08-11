@@ -106,58 +106,58 @@ const characters = [
 
     {
         name: 'NlSickle',
-        img: 'https://pouch.jumpshare.com/preview/uBQP8LhYr1pBLxAgj5Co3pbMugZ4zTWl9MPDXBubMC44Lnca06mzUfFQNNaLQt6ZDuXc8H7Bd9hQklYcuvaa8TYMEZUhke5o73bhl4hkwv4'
+        img: 'https://pouch.jumpshare.com/preview/qJBRRYqbcLN2P4uAxYhHGFD8KZ6a6oVhjmQbl5nRkc5uQXm-bDIeGqQXvWfHGPIukQ4U8w6sdH2viZtsiJY1q120agdj49wH4JUUZhvY0RY'
         , placement: 'char'
 
     },
     {
         name: 'NlBeary',
-        img: 'https://pouch.jumpshare.com/preview/r2zo2hT2VwWDXHWRNyhYYyIDLotsADB_WxKBwVtheQET5on-RnfM7wgxQ636UI6vHhAeLBtbyCOA9YgbVm-mvkZ_at76Wfjdvp2soe-cvG4'
+        img: 'https://pouch.jumpshare.com/preview/86YMwvxf-sK8HyfIvnZyN0k5C10ek3N_L0oX8hM3T-wHlcqMUrfHivElWH--mozrkQ4U8w6sdH2viZtsiJY1q5oM1bAdisCIaCwFYAl7yS0'
         , placement: 'char'
     },
     {
         name: '☆ S M I L E ☆',
-        img: 'https://pouch.jumpshare.com/preview/S1NrdOjJp82_Wxnz3EFezzEG5Uk5lZNq4thUvhxfgkd0aRoJ9X_1WZZUihGrAN8nqX4RI9nDNap3qeGWypyqM-f8UOSn52tUdSfdxFpARdk'
+        img: 'https://pouch.jumpshare.com/preview/RFyR0b28qw71d7wwYeD504v-e9XMYRDvCr_4Y2Ld_4AjMnwVT1kYKW8wq4wVFYsqkQ4U8w6sdH2viZtsiJY1q_hDblGRc1He6voC44GHZBU'
         , placement: 'char'
     },
     {
         name: 'Cosmic Xin Error',
-        img: 'https://pouch.jumpshare.com/preview/PewX87lRlw_nxoAKVVz8PeF_J1OdCzOv0w6EsouCkNLowS10pC8Y5DJplwLkunWfqX4RI9nDNap3qeGWypyqMyWU45DnygWXShSzUSBjlek'
+        img: 'https://pouch.jumpshare.com/preview/NNmx1O-ykAJnrf-I5XHU2DWtNBx5c9095dXmcNteNScWlpg4JEBKN8EiYPsjUljskQ4U8w6sdH2viZtsiJY1q162TwoMTrSJ8gS3wD8aDEc'
         , placement: 'char'
     },
     {
         name: 'Silly Goober',
-        img: 'https://pouch.jumpshare.com/preview/-Bx9qjdzPW_5V9M7OmuaTuB2liwv_5m-wOC5z-GFBXl_dpBVxr7MAJ1j46HctzCMHhAeLBtbyCOA9YgbVm-mvouFevc3Xdu1H_08K_Vl4Oc'
+        img: 'https://pouch.jumpshare.com/preview/G1JHIeXdVF65HLjZ8qeqzoTa_rTLedIUiPZHVYHenJPMIEQa_oqRsA23Vd269Ws4kQ4U8w6sdH2viZtsiJY1q9OklsPjocx-KlWtRH6UO8Y'
         , placement: 'char'
     },
     {
         name: 'Cosmia//Leah',
-        img: 'https://pouch.jumpshare.com/preview/Ogefb0yhknho4oEoEyq0QL9C2rwNqT2AbvYZLuq1lal9Iw69k1m0xBjqw1SKSQadHhAeLBtbyCOA9YgbVm-mvoUY0dG8sGdKorzfkJlnx3Y'
+        img: 'https://pouch.jumpshare.com/preview/rPccTP1Yw3GAs-4ArTAj-5Ou4b2KoprpaPmOpJKtWtHEzJtUssUY9Doy8g6TAzQEkQ4U8w6sdH2viZtsiJY1qw8PmFY1ehPqJEn5qJ7kza0'
         , placement: 'char'
     },
     {
         name: 'SashaRose',
-        img: 'https://pouch.jumpshare.com/preview/hPKpk95RHphuhWtaM4-c5YY5Py4gugnTnOl08dcnaR6570lBFarNeHnZ1R_MUnisHhAeLBtbyCOA9YgbVm-mvtJ8ps-DULxgUsNZX4XRRxs'
+        img: 'https://pouch.jumpshare.com/preview/3B5hMVx79-FsKE3oXIDNNa8nxV1l4WUTJkSCoa0luGMsnxU9a0YmwdYqj0zmYWEnkQ4U8w6sdH2viZtsiJY1qw8PmFY1ehPqJEn5qJ7kza0'
         , placement: 'char'
     },
     {
         name: 'Asher Dasher',
-        img: 'https://pouch.jumpshare.com/preview/VNhuHxyEmkQ44ARbjhDzmwlksPCS7bZyRJ21lYT8FAWIoYEiyIzd8Em1QolTpHOkHhAeLBtbyCOA9YgbVm-mvoTxtsW_44hynAVfvCOYuDY'
+        img: 'https://pouch.jumpshare.com/preview/32ZGBr6uIUtqIau28DvI_a7-_JOq8tLq0hcp_kXLItLGPyn4bD-GqquW-yP-JWsekQ4U8w6sdH2viZtsiJY1qw8PmFY1ehPqJEn5qJ7kza0'
         , placement: 'char'
     },
     {
         name: 'Hauntuh/Emoji Man',
-        img: 'https://pouch.jumpshare.com/preview/z3EPalAt-S7Cfet4IwjYsHrLWzzmpveYT-PJcqkUfDLe0RiENxZoEM8hlDauXOGUqX4RI9nDNap3qeGWypyqM9os5O0--9iKQsofTTsuiFA'
+        img: 'https://pouch.jumpshare.com/preview/bZ79fvh77_4MFCVDS4QmrFIi_isSSeG4tmNF1gJ6S_Y_m3mcuUpya4Z9VYSL6QjnkQ4U8w6sdH2viZtsiJY1qw8PmFY1ehPqJEn5qJ7kza0'
         , placement: 'char'
     },
     {
         name: 'Evadare/Kontos',
-        img: 'https://pouch.jumpshare.com/preview/q2V9_yMTAWOmldlHGliQWBnU-cBtWsRWauV-1eLTQ00lmPyKUgQnGYXHg39gBjQQHhAeLBtbyCOA9YgbVm-mvhPihhC9gqLp1ZbzimVlYzs'
+        img: 'https://pouch.jumpshare.com/preview/xdBPAMXmfBTfAg8SxbAMKwp3evMFPfH6XCiT_mB3yJ200rJuoXUnVU4jcwFZhm5YkQ4U8w6sdH2viZtsiJY1qw8PmFY1ehPqJEn5qJ7kza0'
         , placement: 'char'
     },
     {
         name: 'Wanderer Orcaz',
-        img: 'https://pouch.jumpshare.com/preview/rnYWdFuC_7inxUYSD-bgCMH8st99MaS0-xq0eAOqI6nnMZwbKpIQ1wV6KBnbCnoWHhAeLBtbyCOA9YgbVm-mvm2bMLengbsefzRjP4Yf5GI'
+        img: 'https://pouch.jumpshare.com/preview/cY64qGTsQZCr_UHcmBL5SPAYYYkOM-73ig5CZn0l-PD8nYnpcP3BGp9H47mH-gNUkQ4U8w6sdH2viZtsiJY1qw8PmFY1ehPqJEn5qJ7kza0'
         , placement: 'char'
     }
 ];
