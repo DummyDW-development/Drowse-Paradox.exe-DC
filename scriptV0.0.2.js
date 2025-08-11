@@ -106,58 +106,58 @@ const characters = [
 
     {
         name: 'NlSickle',
-        img:'main/imgs/Nlsickle.svg'
+        img:'https://raw.githubusercontent.com/DummyDW-development/Drowse-Paradox.exe-DC/refs/heads/main/imgs/Nlsickle.svg'
         , placement: 'char'
 
     },
     {
         name: 'NlBeary',
-        img:'main/imgs/Nlbeary.svg'
+        img:'https://raw.githubusercontent.com/DummyDW-development/Drowse-Paradox.exe-DC/refs/heads/main/imgs/Nlbeary.svg'
         , placement: 'char'
     },
     {
         name: '☆ S M I L E ☆',
-        img: 'main/imgs/☆ S M I L E ☆.svg'
+        img: 'https://raw.githubusercontent.com/DummyDW-development/Drowse-Paradox.exe-DC/refs/heads/main/imgs/☆ S M I L E ☆.svg'
         , placement: 'char'
     },
     {
         name: 'Cosmic Xin Error',
-        img:'main/imgs/Cosmic.svg'
+        img:'https://raw.githubusercontent.com/DummyDW-development/Drowse-Paradox.exe-DC/refs/heads/main/imgs/Cosmic.svg'
         , placement: 'char'
     },
     {
         name: 'Silly Goober',
-        img:'main/imgs/Silly Goober.svg'
+        img:'https://raw.githubusercontent.com/DummyDW-development/Drowse-Paradox.exe-DC/refs/heads/main/imgs/Silly Goober.svg'
         , placement: 'char'
     },
     {
         name: 'Cosmia//Leah',
-        img:'main/imgs/Cosmia-Leah.svg'
+        img:'https://raw.githubusercontent.com/DummyDW-development/Drowse-Paradox.exe-DC/refs/heads/main/imgs/Cosmia-Leah.svg'
         , placement: 'char'
     },
     {
         name: 'SashaRose',
-        img:'main/imgs/SashaRose.svg'
+        img:'https://raw.githubusercontent.com/DummyDW-development/Drowse-Paradox.exe-DC/refs/heads/main/imgs/SashaRose.svg'
         , placement: 'char'
     },
     {
         name: 'Asher Dasher',
-        img:'main/imgs/Asher.svg'
+        img:'https://raw.githubusercontent.com/DummyDW-development/Drowse-Paradox.exe-DC/refs/heads/main/imgs/Asher.svg'
         , placement: 'char'
     },
     {
         name: 'Hauntuh/Emoji Man',
-        img:'main/imgs/Hauntuh.svg'
+        img:'https://raw.githubusercontent.com/DummyDW-development/Drowse-Paradox.exe-DC/refs/heads/main/imgs/Hauntuh.svg'
         , placement: 'char'
     },
     {
         name: 'Evadare/Kontos',
-        img:'main/imgs/Evadare.svg'
+        img:'https://raw.githubusercontent.com/DummyDW-development/Drowse-Paradox.exe-DC/refs/heads/main/imgs/Evadare.svg'
         , placement: 'char'
     },
     {
         name: 'Wanderer Orcaz',
-        img:'main/imgs/Wanderer.svg'
+        img:'https://raw.githubusercontent.com/DummyDW-development/Drowse-Paradox.exe-DC/refs/heads/main/imgs/Wanderer.svg'
         , placement: 'char'
     }
 ];
