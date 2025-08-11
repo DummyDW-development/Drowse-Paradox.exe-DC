@@ -137,7 +137,7 @@ const characters = [
     },
     {
         name: 'SashaRose',
-        img:'https://raw.githubusercontent.com/DummyDW-development/Drowse-Paradox.exe-DC/refs/heads/main/imgs/SashaRose.svg'
+        img:'https://raw.githubusercontent.com/DummyDW-development/Drowse-Paradox.exe-DC/refs/heads/main/New%20Renders/SashaRose/SashaRose.png'
         , placement: 'char'
     },
     {
