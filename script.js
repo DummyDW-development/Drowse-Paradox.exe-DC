@@ -214,3 +214,32 @@ searchBtn.addEventListener('click', () => {
 // Show all by default
 displayResults(characters);
 
+document.querySelectorAll('.view-btn').forEach(btn => {
+  btn.addEventListener('click', e => {
+    const name = e.target.getAttribute('data-name');
+    const char = characters.find(c => c.name === name);
+
+    // Fade out results
+    results.classList.add('fade-out');
+
+    setTimeout(() => {
+      // Load character details
+      document.getElementById('viewDetails').innerHTML = `
+        <h2>${char.name}</h2>
+        <img src="${char.img}" style="max-width:100%;border:2px solid white;border-radius:10px;">
+        <p>More stats/info about ${char.name} here...</p>
+      `;
+
+      // Show panel
+      document.getElementById('viewPanel').classList.add('active');
+    }, 400); // matches fade-out duration
+  });
+});
+
+// Close button logic
+document.getElementById('closeView').addEventListener('click', () => {
+  document.getElementById('viewPanel').classList.remove('active');
+  setTimeout(() => {
+    results.classList.remove('fade-out');
+  }, 500); // wait for panel to slide down
+});

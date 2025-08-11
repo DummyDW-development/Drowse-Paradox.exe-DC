@@ -167,3 +167,47 @@ body {
         4px -4px 0 white;
     text-align: center;
 }
+
+/* Hidden view panel overlay */
+.view-panel {
+  position: fixed;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 60px); /* adjust for navbar height */
+  background: rgba(0,0,0,0.9);
+  overflow-y: auto;
+  transition: bottom 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+  z-index: 900;
+}
+
+/* Visible state */
+.view-panel.active {
+  bottom: 0;
+  opacity: 1;
+}
+
+/* Inner content */
+.view-content {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Close button */
+.close-btn {
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 5px;
+  color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+  float: right;
+}
+
+/* Fade out effect for main results */
+.results.fade-out {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
