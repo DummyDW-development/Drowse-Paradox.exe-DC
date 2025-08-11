@@ -106,58 +106,58 @@ const characters = [
 
     {
         name: 'NlSickle',
-        img:'img/Nlsickle.svg'
+        img:'imgs/Nlsickle.svg'
         , placement: 'char'
 
     },
     {
         name: 'NlBeary',
-        img:'img/Nlbeary.svg'
+        img:'imgs/Nlbeary.svg'
         , placement: 'char'
     },
     {
         name: '☆ S M I L E ☆',
-        img: 'img/☆ S M I L E ☆.svg'
+        img: 'imgs/☆ S M I L E ☆.svg'
         , placement: 'char'
     },
     {
         name: 'Cosmic Xin Error',
-        img:'img/Cosmic.svg'
+        img:'imgs/Cosmic.svg'
         , placement: 'char'
     },
     {
         name: 'Silly Goober',
-        img:'img/Silly Goober.svg'
+        img:'imgs/Silly Goober.svg'
         , placement: 'char'
     },
     {
         name: 'Cosmia//Leah',
-        img:'img/Cosmia-Leah.svg'
+        img:'imgs/Cosmia-Leah.svg'
         , placement: 'char'
     },
     {
         name: 'SashaRose',
-        img:'img/SashaRose.svg'
+        img:'imgs/SashaRose.svg'
         , placement: 'char'
     },
     {
         name: 'Asher Dasher',
-        img:'img/Asher.svg'
+        img:'imgs/Asher.svg'
         , placement: 'char'
     },
     {
         name: 'Hauntuh/Emoji Man',
-        img:'img/Hauntuh.svg'
+        img:'imgs/Hauntuh.svg'
         , placement: 'char'
     },
     {
         name: 'Evadare/Kontos',
-        img:'img/Evadare.svg'
+        img:'imgs/Evadare.svg'
         , placement: 'char'
     },
     {
         name: 'Wanderer Orcaz',
-        img:'img/Wanderer.svg'
+        img:'imgs/Wanderer.svg'
         , placement: 'char'
     }
 ];
