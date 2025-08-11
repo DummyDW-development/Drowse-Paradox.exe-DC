@@ -219,20 +219,57 @@ document.querySelectorAll('.view-btn').forEach(btn => {
     const name = e.target.getAttribute('data-name');
     const char = characters.find(c => c.name === name);
 
-    // Fade out results
     results.classList.add('fade-out');
 
     setTimeout(() => {
-      // Load character details
-      document.getElementById('viewDetails').innerHTML = `
-        <h2>${char.name}</h2>
-        <img src="${char.img}" style="max-width:100%;border:2px solid white;border-radius:10px;">
-        <p>More stats/info about ${char.name} here...</p>
-      `;
+      const img = new Image();
+      img.src = char.img;
+      img.alt = char.name;
 
-      // Show panel
-      document.getElementById('viewPanel').classList.add('active');
-    }, 400); // matches fade-out duration
+      img.onload = () => {
+        const fixedHeight = 300; // desired fixed height of container & image
+
+        // Calculate scaled width preserving aspect ratio
+        const scale = fixedHeight / img.naturalHeight;
+        const scaledWidth = img.naturalWidth * scale;
+
+        // Create wrapper div with dynamic width & fixed height
+        const wrapper = document.createElement('div');
+        wrapper.style.height = fixedHeight + 'px';
+        wrapper.style.width = scaledWidth + 'px';
+        wrapper.style.margin = '20px auto';
+        wrapper.style.border = '2px solid white';
+        wrapper.style.borderRadius = '10px';
+        wrapper.style.overflow = 'hidden';
+        wrapper.style.backgroundColor = '#111';
+        wrapper.style.display = 'flex';
+        wrapper.style.justifyContent = 'center';
+        wrapper.style.alignItems = 'center';
+
+        // Style image to have 100% height, auto width (maintain aspect)
+        img.style.height = fixedHeight + 'px';
+        img.style.width = 'auto';
+        img.style.objectFit = 'contain';
+
+        wrapper.appendChild(img);
+
+        // Insert into viewDetails
+        const viewDetails = document.getElementById('viewDetails');
+        viewDetails.innerHTML = `<h2>${char.name}</h2>`;
+        viewDetails.appendChild(wrapper);
+        viewDetails.innerHTML += `<p>More stats/info about ${char.name} here...</p>`;
+
+        document.getElementById('viewPanel').classList.add('active');
+      };
+
+      img.onerror = () => {
+        document.getElementById('viewDetails').innerHTML = `
+          <h2>${char.name}</h2>
+          <p>Image failed to load.</p>
+        `;
+        document.getElementById('viewPanel').classList.add('active');
+      };
+    }, 400);
   });
 });
 
