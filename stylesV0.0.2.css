@@ -257,3 +257,12 @@ body {
   }
 }
 
+
+/* Hide navbar when a view panel is open */
+.view-panel.active ~ .navbar,
+.view-panel.active + .navbar,
+.view-panel.active .navbar,
+.view-panel.active ~ header,
+.view-panel.active header {
+  display: none !important;
+}
