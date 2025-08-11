@@ -112,7 +112,7 @@ const characters = [
     },
     {
         name: 'NlBeary',
-        img:'https://raw.githubusercontent.com/DummyDW-development/Drowse-Paradox.exe-DC/refs/heads/main/imgs/Nlbeary.svg'
+        img:'https://raw.githubusercontent.com/DummyDW-development/Drowse-Paradox.exe-DC/refs/heads/main/New%20Renders/NlBeary/Nlbeary.webp'
         , placement: 'char'
     },
     {
@@ -157,7 +157,7 @@ const characters = [
     },
     {
         name: 'Wanderer Orcaz',
-        img:'https://raw.githubusercontent.com/DummyDW-development/Drowse-Paradox.exe-DC/refs/heads/main/imgs/Wanderer.svg'
+        img:'https://raw.githubusercontent.com/DummyDW-development/Drowse-Paradox.exe-DC/refs/heads/main/New%20Renders/Wanderer/Wanderer.webp'
         , placement: 'char'
     }
 ];
