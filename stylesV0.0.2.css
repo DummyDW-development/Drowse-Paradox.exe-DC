@@ -1,0 +1,213 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* General Page Styles */
+body {
+    background: #000 url('https://i.pinimg.com/originals/d2/09/8a/d2098ac3a2a8e8de756ac644d05482f6.gif') repeat;
+    background-size: auto;
+    font-family: 'Trebuchet MS', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.75);
+    border-bottom: 3px solid white;
+    padding: 10px 20px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Search Bar */
+.searchbar {
+    display: flex;
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 4px;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.searchbar input {
+    background: transparent;
+    border: none;
+    color: white;
+    outline: none;
+    padding: 6px;
+    font-size: 16px;
+}
+
+.searchbar #searchBtn {
+    cursor: pointer;
+    padding: 4px 8px;
+    user-select: none;
+}
+
+/* Nav Menu Icon */
+.navItems {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* Results Grid */
+#results {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+/* Each Result */
+.result-item {
+    background: rgba(0, 0, 0, 0.65);
+    border: 2px solid white;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.result-item:hover {
+    transform: scale(1.05);
+}
+
+/* Character Image */
+.result-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid white;
+}
+
+/* Character Name */
+.result-item span {
+    display: block;
+    padding: 8px 0;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 1px 1px black;
+}
+
+/* View Button */
+.view-btn {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 4px 8px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s, color 0.2s;
+}
+
+.view-btn:hover {
+    background: white;
+    color: black;
+}
+
+/* Scribble Border Effect */
+.result-item,
+.searchbar {
+    box-shadow:
+        -2px 2px 0 white,
+        2px -2px 0 white,
+        -4px 4px 0 white,
+        4px -4px 0 white;
+}
+
+/* Big section separators (Forsaken Characters / My Personal Characters) */
+.content-separator {
+    grid-column: 1 / -1;
+    /* take over the whole row */
+    justify-self: center;
+    /* center it so it doesn’t stretch the whole row */
+    background: rgba(0, 0, 0, 0.65);
+    border: 2px solid white;
+    border-radius: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 8px 16px;
+    margin: 10px 0;
+    box-shadow:
+        -2px 2px 0 white,
+        2px -2px 0 white,
+        -4px 4px 0 white,
+        4px -4px 0 white;
+    text-align: center;
+}
+
+/* Category separators (Survivors / Killers / Specials) */
+.category-separator {
+    grid-column: 1 / -1;
+    /* span the row */
+    justify-self: center;
+    /* center block instead of stretching */
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid rgb(213, 213, 213);
+    border-radius: 8px;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 6px 14px;
+    margin: 6px 0;
+    box-shadow:
+        -2px 2px 0 white,
+        2px -2px 0 white,
+        -4px 4px 0 white,
+        4px -4px 0 white;
+    text-align: center;
+}
+
+/* Hidden view panel overlay */
+.view-panel {
+  position: fixed;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 60px); /* adjust for navbar height */
+  background: rgba(0,0,0,0.9);
+  overflow-y: auto;
+  transition: bottom 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+  z-index: 900;
+}
+
+/* Visible state */
+.view-panel.active {
+  bottom: 0;
+  opacity: 1;
+}
+
+/* Inner content */
+.view-content {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Close button */
+.close-btn {
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 5px;
+  color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+  float: right;
+}
+
+/* Fade out effect for main results */
+.results.fade-out {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
