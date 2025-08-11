@@ -212,4 +212,48 @@ body {
   transition: opacity 0.4s ease;
 }
 
+/* --- Responsive (Mobile) Layouts --- */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    padding: 8px 10px;
+  }
+
+  .searchbar input {
+    font-size: 14px;
+    min-width: 0;
+    width: 120px;
+  }
+
+  .searchbar {
+    width: 100%;
+    margin: 8px 0;
+  }
+
+  #results {
+    grid-template-columns: 1fr;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .result-item img {
+    height: 140px; /* smaller images for mobile */
+  }
+
+  .content-separator,
+  .category-separator {
+    font-size: 18px;
+    padding: 4px 6px;
+  }
+
+  .view-panel {
+    height: 100vh !important; /* use full height on mobile */
+    padding: 0;
+  }
+
+  .view-content {
+    padding: 10px !important;
+    max-width: 98vw;
+  }
+}
 
