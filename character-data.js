@@ -19,7 +19,7 @@
                                 "Difficulty": "★★★☆☆",
                                 "Health": 100,
                                 "Regular Speed": 12,
-                                "Sprinting Speed": '26[1]',
+                                "Sprinting Speed": "26[1]",
                                 "Max Stamina": 100,
                                 "Stamina Loss per sec": 10,
                                 "Stamina Gain per sec": 20
