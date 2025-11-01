@@ -194,7 +194,19 @@
                 {
                         name: 'Guest 666',
                         img: 'https://raw.githubusercontent.com/DummyDW-development/Drowse-Paradox.exe-DC/refs/heads/main/imgs/guest666.webp',
-                        placement: 'char'
+                        placement: 'char',
+description: 'Cursed with their name from the moment of their existence, he managed to find solace in Noob. Someone who saw them for they were inside, but that ideal reality would not last. Guest 666 will viciously rip and tear through any obstacle in her way, feasting on the bloodshed and carnage to empower his abilities.',
+stats: {
+"Difficulty": "★★★☆☆",
+
+"Health": 2500,
+"Regular Speed": "To be update...",
+"Sprinting Speed": 27,
+"Max Stamina": 110,
+"Stamina Loss per sec": 9,
+"Stamina Gain per sec": 21,
+"Terror Radius": "80 Studs"
+}
                 },
             {
                 name: 'John Doe',
