@@ -1,268 +1,524 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-/* General Page Styles */
-body {
-    background: #000 url('https://i.pinimg.com/originals/d2/09/8a/d2098ac3a2a8e8de756ac644d05482f6.gif') repeat;
-    background-size: auto;
-    font-family: 'Trebuchet MS', sans-serif;
-    color: white;
-    margin: 0;
-    padding: 0;
-}
-
-/* Navbar */
-.navbar {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.75);
-    border-bottom: 3px solid white;
-    padding: 10px 20px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-}
-
-/* Search Bar */
-.searchbar {
-    display: flex;
-    align-items: center;
-    border: 2px solid white;
-    border-radius: 8px;
-    padding: 4px;
-    background: rgba(0, 0, 0, 0.6);
-}
-
-.searchbar input {
-    background: transparent;
-    border: none;
-    color: white;
-    outline: none;
-    padding: 6px;
-    font-size: 16px;
-}
-
-.searchbar #searchBtn {
-    cursor: pointer;
-    padding: 4px 8px;
-    user-select: none;
-}
-
-/* Nav Menu Icon */
-.navItems {
-    cursor: pointer;
-    font-size: 20px;
-}
-
-/* Results Grid */
-#results {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 15px;
-    padding: 20px;
-}
-
-/* Each Result */
-.result-item {
-    background: rgba(0, 0, 0, 0.65);
-    border: 2px solid white;
-    border-radius: 10px;
-    overflow: hidden;
-    text-align: center;
-    transition: transform 0.2s;
-}
-
-.result-item:hover {
-    transform: scale(1.05);
-}
-
-/* Character Image */
-.result-item img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-bottom: 2px solid white;
-}
-
-/* Character Name */
-.result-item span {
-    display: block;
-    padding: 8px 0;
-    font-size: 16px;
-    font-weight: bold;
-    text-shadow: 1px 1px black;
-}
-
-/* View Button */
-.view-btn {
-    background: transparent;
-    color: white;
-    border: 2px solid white;
-    border-radius: 5px;
-    padding: 4px 8px;
-    margin-bottom: 10px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background 0.2s, color 0.2s;
-}
-
-.view-btn:hover {
-    background: white;
-    color: black;
-}
-
-/* Scribble Border Effect */
-.result-item,
-.searchbar {
-    box-shadow:
-        -2px 2px 0 white,
-        2px -2px 0 white,
-        -4px 4px 0 white,
-        4px -4px 0 white;
-}
-
-/* Big section separators (Forsaken Characters / My Personal Characters) */
-.content-separator {
-    grid-column: 1 / -1;
-    /* take over the whole row */
-    justify-self: center;
-    /* center it so it doesn’t stretch the whole row */
-    background: rgba(0, 0, 0, 0.65);
-    border: 2px solid white;
-    border-radius: 10px;
-    font-size: 30px;
-    font-weight: bold;
-    padding: 8px 16px;
-    margin: 10px 0;
-    box-shadow:
-        -2px 2px 0 white,
-        2px -2px 0 white,
-        -4px 4px 0 white,
-        4px -4px 0 white;
-    text-align: center;
-}
-
-/* Category separators (Survivors / Killers / Specials) */
-.category-separator {
-    grid-column: 1 / -1;
-    /* span the row */
-    justify-self: center;
-    /* center block instead of stretching */
-    background: rgba(0, 0, 0, 0.5);
-    border: 2px solid rgb(213, 213, 213);
-    border-radius: 8px;
-    font-size: 22px;
-    font-weight: bold;
-    padding: 6px 14px;
-    margin: 6px 0;
-    box-shadow:
-        -2px 2px 0 rgb(85, 85, 85),
-        2px -2px 0 white,
-        -4px 4px 0 white,
-        4px -4px 0 white;
-    text-align: center;
-}
-
-/* Hidden view panel overlay */
-.view-panel {
-  position: fixed;
-  bottom: -100%;
-  left: 0;
-  width: 100%;
-  height: calc(100vh - 60px); /* adjust for navbar height */
-  background: rgba(0,0,0,0.9);
-  overflow-y: auto;
-  transition: bottom 0.5s ease, opacity 0.5s ease;
-  opacity: 0;
-  z-index: 900;
-}
-
-/* Visible state */
-.view-panel.active {
-  bottom: 0;
-  opacity: 1;
-}
-
-/* Inner content */
-.view-content {
-  max-width: 800px;
-  margin: auto;
-  padding: 20px;
-}
-
-/* Close button */
-.close-btn {
-  background: transparent;
-  border: 2px solid white;
-  border-radius: 5px;
-  color: white;
-  padding: 5px 10px;
-  cursor: pointer;
-  float: right;
-}
-
-/* Fade out effect for main results */
-.results.fade-out {
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-/* --- Responsive (Mobile) Layouts --- */
-@media (max-width: 600px) {
-  .navbar {
-    flex-direction: column;
-    padding: 8px 10px;
-  }
-
-  .searchbar input {
-    font-size: 14px;
-    min-width: 0;
-    width: 120px;
-  }
-
-  .searchbar {
-    width: 100%;
-    margin: 8px 0;
-  }
-
-  #results {
-    grid-template-columns: 1fr;
-    padding: 10px;
-    gap: 10px;
-  }
-
-  .result-item img {
-    height: 140px; /* smaller images for mobile */
-  }
-
-  .content-separator,
-  .category-separator {
-    font-size: 18px;
-    padding: 4px 6px;
-  }
-
-  .view-panel {
-    height: 100vh !important; /* use full height on mobile */
-    padding: 0;
-  }
-
-  .view-content {
-    padding: 10px !important;
-    max-width: 98vw;
-  }
-}
+        @import url('https://fonts.cdnfonts.com/css/accanthis-adf-std');
 
 
-/* Hide navbar when a view panel is open */
-.view-panel.active ~ .navbar,
-.view-panel.active + .navbar,
-.view-panel.active .navbar,
-.view-panel.active ~ header,
-.view-panel.active header {
-  display: none !important;
-}
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Accanthis ADF Std', sans-serif;
+        }
+
+        /* General Page Styles */
+        body {
+            background: #000 url('https://i.pinimg.com/originals/d2/09/8a/d2098ac3a2a8e8de756ac644d05482f6.gif') repeat;
+            background-size: auto;
+
+            color: white;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Safe area handling for modern phones */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: -1;
+        }
+
+        /* Navbar - Mobile Optimized */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.75);
+            border-bottom: 3px solid white;
+            padding: 12px 16px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            min-height: 60px;
+        }
+
+        /* Search Bar - Mobile Friendly */
+        .searchbar {
+            display: flex;
+            align-items: center;
+            border: 2px solid white;
+            border-radius: 8px;
+            padding: 6px;
+            background: rgba(0, 0, 0, 0.6);
+            flex: 1;
+            max-width: 280px;
+            margin: 0 10px;
+        }
+
+        .searchbar input {
+            background: transparent;
+            border: none;
+            color: white;
+            outline: none;
+            padding: 6px;
+            font-size: 16px;
+            width: 100%;
+            flex: 1;
+        }
+
+        .searchbar input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .searchbar #searchBtn {
+            cursor: pointer;
+            padding: 4px 8px;
+            user-select: none;
+            margin: 4px;
+        }
+
+        /* Nav Menu Icon */
+        .navItems {
+            cursor: pointer;
+            font-size: 20px;
+            padding: 8px;
+        }
+
+        /* Main Content Area */
+        .main-content {
+            padding-bottom: env(safe-area-inset-bottom, 20px);
+        }
+
+        /* Results Grid - Mobile First */
+        #results {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+            padding: 20px;
+        }
+
+        /* Each Result - Keeping Original Border Style */
+        .result-item {
+            background: rgba(0, 0, 0, 0.65);
+            border: 2px solid white;
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .result-item:hover {
+            transform: scale(1.05);
+        }
+
+        .result-item:active {
+            transform: scale(0.98);
+        }
+
+        /* Scribble Border Effect - Original Style */
+        .result-item,
+        .searchbar {
+            box-shadow:
+                -2px 2px 0 white,
+                2px -2px 0 white,
+                -4px 4px 0 white,
+                4px -4px 0 white;
+        }
+
+        /* Character Image */
+        .result-item img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-bottom: 2px solid white;
+        }
+
+        /* Character Name */
+        .result-item span {
+            display: block;
+            padding: 8px 0;
+            font-size: 16px;
+            font-weight: bold;
+            text-shadow: 1px 1px black;
+        }
+
+        /* View Button - Original Style */
+        .view-btn {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+            border-radius: 5px;
+            padding: 8px 12px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.2s, color 0.2s;
+            min-height: 44px;
+            /* Better touch target */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 8px auto 12px;
+            width: 80%;
+        }
+
+        .view-btn:hover {
+            background: white;
+            color: black;
+        }
+
+        .view-btn:active {
+            background: white;
+            color: black;
+            transform: scale(0.95);
+        }
+
+        /* Big section separators (Forsaken Characters / My Personal Characters) */
+        .content-separator {
+            grid-column: 1 / -1;
+            justify-self: center;
+            background: rgba(0, 0, 0, 0.65);
+            border: 2px solid white;
+            border-radius: 10px;
+            font-size: 24px;
+            font-weight: bold;
+            padding: 12px 20px;
+            margin: 16px 0;
+            box-shadow:
+                -2px 2px 0 white,
+                2px -2px 0 white,
+                -4px 4px 0 white,
+                4px -4px 0 white;
+            text-align: center;
+        }
+
+        /* Category separators (Survivors / Killers / Specials) */
+        .category-separator {
+            grid-column: 1 / -1;
+            justify-self: center;
+            background: rgba(0, 0, 0, 0.5);
+            border: 2px solid rgb(213, 213, 213);
+            border-radius: 8px;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 10px 16px;
+            margin: 12px 0;
+            box-shadow:
+                -2px 2px 0 rgb(85, 85, 85),
+                2px -2px 0 white,
+                -4px 4px 0 white,
+                4px -4px 0 white;
+            text-align: center;
+        }
+
+        /* View Panel - Mobile Full Screen */
+        .view-panel {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            transform: translateY(100%);
+            transition: transform 0.4s ease;
+            z-index: 2000;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .view-panel.active {
+            transform: translateY(0);
+        }
+
+        /* Inner content */
+        .view-content {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* Close button - Original Style */
+        .close-btn {
+            background: transparent;
+            border: 2px solid white;
+            border-radius: 5px;
+            color: white;
+            padding: 8px 12px;
+            cursor: pointer;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 2001;
+            min-width: 44px;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .close-btn:active {
+            background: white;
+            color: black;
+        }
+
+        /* Hide navbar when a view panel is open */
+        .view-panel.active~.navbar,
+        .view-panel.active+.navbar,
+        .view-panel.active .navbar,
+        .view-panel.active~header,
+        .view-panel.active header {
+            display: none !important;
+        }
+
+        /* Fade out effect for main results */
+        .results.fade-out {
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        /* --- Enhanced Mobile Responsive Layouts --- */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: row;
+                /* Keep horizontal on mobile */
+                padding: 10px 12px;
+                min-height: 56px;
+            }
+
+            .searchbar {
+                width: 100%;
+                margin: 0 8px;
+                max-width: none;
+            }
+
+            .searchbar input {
+                font-size: 16px;
+                /* Prevents zoom on iOS */
+                min-width: 0;
+            }
+
+            #results {
+                grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+                gap: 12px;
+                padding: 16px;
+            }
+
+            .result-item img {
+                height: 140px;
+            }
+
+            .content-separator {
+                font-size: 20px;
+                padding: 10px 16px;
+                margin: 12px 0;
+            }
+
+            .category-separator {
+                font-size: 18px;
+                padding: 8px 14px;
+                margin: 10px 0;
+            }
+
+            .view-btn {
+                padding: 10px 14px;
+                font-size: 14px;
+                margin: 10px auto;
+            }
+
+            .view-content {
+                padding: 16px !important;
+                max-width: 95vw;
+            }
+        }
+
+        /* Small Phones */
+        @media (max-width: 360px) {
+            #results {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+                padding: 12px;
+            }
+
+            .result-item img {
+                height: 120px;
+            }
+
+            .result-item span {
+                font-size: 14px;
+                padding: 6px 0;
+            }
+
+            .navbar {
+                padding: 8px 10px;
+            }
+
+            .searchbar {
+                padding: 4px;
+            }
+
+            .content-separator {
+                font-size: 18px;
+                padding: 8px 12px;
+            }
+
+            .category-separator {
+                font-size: 16px;
+                padding: 6px 10px;
+            }
+        }
+
+        /* Large Phones and Tablets */
+        @media (min-width: 769px) {
+            #results {
+                grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+                gap: 20px;
+                padding: 20px;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+        }
+
+        /* Reduced motion for accessibility */
+        @media (prefers-reduced-motion: reduce) {
+
+            .result-item,
+            .view-panel,
+            .view-btn {
+                transition: none;
+            }
+
+            .result-item:hover,
+            .result-item:active {
+                transform: none;
+            }
+        }
+
+        /* Character Stats Styles */
+        .character-header {
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid white;
+            padding-bottom: 15px;
+        }
+
+        .character-header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .character-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .character-image {
+            text-align: center;
+        }
+
+        .character-image img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .character-stats {
+            background: rgba(0, 0, 0, 0.7);
+            border: 2px solid white;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .character-stats h3 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 8px;
+            font-size: 1.5rem;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .stat-label {
+            font-weight: bold;
+            color: #ccc;
+        }
+
+        .stat-value {
+            font-weight: bold;
+            color: white;
+        }
+
+        .character-description {
+            background: rgba(0, 0, 0, 0.7);
+            border: 2px solid white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .character-description h3 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 8px;
+            font-size: 1.5rem;
+        }
+
+        .character-description p {
+            margin: 0;
+            line-height: 1.6;
+            font-size: 1.1rem;
+        }
+
+        /* Mobile responsive for stats */
+        @media (max-width: 768px) {
+            .character-content {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .character-header h1 {
+                font-size: 2rem;
+            }
+
+            .character-stats,
+            .character-description {
+                padding: 15px;
+            }
+
+            .stat-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+            }
+
+            .character-stats h3,
+            .character-description h3 {
+                font-size: 1.3rem;
+            }
+        }
