@@ -14,6 +14,16 @@
                         name: 'Veronica',
                         img: 'https://raw.githubusercontent.com/DummyDW-development/Drowse-Paradox.exe-DC/refs/heads/main/imgs/Veronica.webp',
                         placement: 'char',
+                        discription: 'A rebellious robot, once with a heart for tags and shredding. Letting her pieces run all while she jumps, kicks, and flies though the air! If danger ever finds her, she can slip away rapidly and repair herself. Veeronica stands as a pillar of survivability. Able to hold her own and take care of herself, all while sacrificing some aid from others for sustainability, speed, and style.',
+                        stats: {
+                                "Difficulty": "★★★☆☆",
+                                "Health": 100,
+                                "Regular Speed": 12,
+                                "Sprinting Speed": '26[1]',
+                                "Max Stamina": 100,
+                                "Stamina Loss per sec": 10,
+                                "Stamina Gain per sec": 20
+                        }
                 },
                 
 
