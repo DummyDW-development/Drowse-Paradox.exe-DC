@@ -174,6 +174,11 @@
                 placement: 'char'
 
             },
+                {
+                        name: 'Guest 666',
+                        img: 'https://raw.githubusercontent.com/DummyDW-development/Drowse-Paradox.exe-DC/refs/heads/main/imgs/guest666.webp',
+                        placement: 'char'
+                },
             {
                 name: 'John Doe',
                 img: 'https://preview.redd.it/has-anyone-noticed-that-there-is-a-new-model-in-the-new-v0-mg6mfsz1rt6f1.png?width=439&format=png&auto=webp&s=ab8ed2adcc2ad115ecf23f5e274777829a80e3e8',
