@@ -12,7 +12,7 @@
 
                 {
                         name: 'Veronica',
-                        img: '',
+                        img: 'https://raw.githubusercontent.com/DummyDW-development/Drowse-Paradox.exe-DC/refs/heads/main/imgs/Veronica.webp',
                         placement: 'char',
                 },
                 
