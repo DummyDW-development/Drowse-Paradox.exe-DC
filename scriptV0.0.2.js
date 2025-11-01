@@ -1,293 +1,411 @@
-const characters = [
-    // Survivors
-    { name: 'Forsaken', placement: 'contentSeparator'},
+        const characters = [
+            // Survivors
+            {
+                name: 'Forsaken',
+                placement: 'contentSeparator'
+            },
 
-    { name: 'Survivors', placement: 'charSeparator'},
+            {
+                name: 'Survivors',
+                placement: 'charSeparator'
+            },
+
+            {
+                name: 'Noob',
+                img: 'https://preview.redd.it/noob-render-d-v0-03sszvgxlzcf1.png?width=320&crop=smart&auto=webp&s=e8694b551f2b50dd503421fe2457e4102f2d3b4b',
+                placement: 'char',
+                description: 'A big snack person at heart, Noob has a handful of food items at their disposal. Sneaking by with their ghostburger, moving faster with their cola, and tanking damage with their slateskin, they\'re scared, but still pushes on, wanting to find an escape.',
+                stats: {
+                    "Difficulty": "★★★☆☆",
+                    "Health": 100,
+                    "Regular Speed": 12,
+                    "Sprinting Speed": 24,
+                    "Max Stamina": 100,
+                    "Stamina Loss per sec": 10,
+                    "Stamina Gain per sec": 20
+                }
+            },
+            {
+                name: 'Shedletsky',
+                img: 'https://preview.redd.it/shedletsky-cosplay-skin-concept-v0-p6anrklzhx7f1.png?width=419&format=png&auto=webp&s=579529408534588ad48e38619b48510fb5c1735c',
+                placement: 'char',
+                description: 'Description for Shedletsky...',
+                stats: {
+                    "Difficulty": "★★☆☆☆",
+                    "Health": 90,
+                    "Regular Speed": 12,
+                    "Sprinting Speed": 24,
+                    "Max Stamina": 100,
+                    "Stamina Loss per sec": 10,
+                    "Stamina Gain per sec": 20
+                }
+            },
+            {
+                name: 'Chance',
+                img: 'https://preview.redd.it/i-made-chance-from-forsaken-rate-please-v0-cp840pxulofe1.png?width=320&crop=smart&auto=webp&s=a5373e4a114426ab71cc4800580dfa29fcc0f9d1',
+                placement: 'char',
+                description: 'The sounds of machines promising great rewards spiral within his ears. Gambling with his life, his potential lies inside of the result of his coin. He also wields a shoddy flintlock that feels like it could break at any moment, but it\'s one that he\'ll take to his death.',
+                stats: {
+                    "Difficulty": "00 00 never stop gambling",
+                    "Health": "60-120",
+                    "Regular Speed": 12,
+                    "Sprinting Speed": 24,
+                    "Max Stamina": 100,
+                    "Stamina Loss per sec": 10,
+                    "Stamina Gain per sec": 20
+                }
+            },
+            {
+                name: 'Two Time',
+                img: 'https://preview.redd.it/all-the-old-and-new-two-time-renders-made-by-yuyu-v0-hz5mbl4oulxe1.jpg?width=640&crop=smart&auto=webp&s=765bb23aeee6688880d83850132259f1eeeecaa1',
+                placement: 'char',
+                description: 'A fragile cultist holding a horrible secret. When mortally wounded, they resurrect themselves with wings and tails, and recover as if nothing had happened.',
+                stats: {
+                    "Difficulty": "★★☆☆☆",
+                    "Health": 80,
+                    "Regular Speed": 12,
+                    "Sprinting Speed": 24,
+                    "Max Stamina": 100,
+                    "Stamina Loss per sec": 10,
+                    "Stamina Gain per sec": 20
+                }
+            },
+            {
+                name: 'Dusekkar',
+                img: 'https://preview.redd.it/what-is-the-most-no-skill-survivor-in-your-opinion-v0-v0f79ljvnzxe1.png?width=640&crop=smart&auto=webp&s=ef3299fbaafdec01ae0cb0fdbb6075ac1f0be0ca',
+                placement: 'char',
+                description: 'pumpkn guy (:',
+                stats: {
+                    "Difficulty": "★★★★★",
+                    "Health": 90,
+                    "Regular Speed": 12,
+                    "Sprinting Speed": 24,
+                    "Max Stamina": 100,
+                    "Stamina Loss per sec": 10,
+                    "Stamina Gain per sec": 20
+                }
+            },
+            {
+                name: 'Builderman',
+                img: 'https://preview.redd.it/what-is-the-most-no-skill-survivor-in-your-opinion-v0-3pkf0djvnzxe1.png?width=640&crop=smart&auto=webp&s=81e88ca850650af7fe51bc62bc8830b9a8e8a1c3',
+                placement: 'char',
+                description: 'The big boss of Roblox HQ himself. With a hammer in his inventory and a lot of spare parts and materials to spare, he\'s able to build contraptions that can either slow the killer\'s path, or heal those around him. As a promise with Shedletsky, he\'ll do all he can to help everyone.',
+                stats: {
+                    "Difficulty": "★★☆☆☆",
+                    "Health": 90,
+                    "Regular Speed": 12,
+                    "Sprinting Speed": 24,
+                    "Max Stamina": 100,
+                    "Stamina Loss per sec": 10,
+                    "Stamina Gain per sec": 20
+                }
+            },
+            {
+                name: 'Elliot',
+                img: 'https://preview.redd.it/fanmade-elliot-render-cause-the-current-one-got-removed-v0-p739z4ixzh0f1.png?width=640&crop=smart&auto=webp&s=693c8d55952558194e009e35d7f102e0670474cb',
+                placement: 'char',
+                description: 'Description for Elliot...',
+                stats: {
+                    "Difficulty": "★★★☆☆",
+                    "Health": 100,
+                    "Regular Speed": 12,
+                    "Sprinting Speed": 24,
+                    "Max Stamina": 100,
+                    "Stamina Loss per sec": 10,
+                    "Stamina Gain per sec": 20
+                }
+            },
+            {
+                name: 'Geust 1337',
+                img: 'https://preview.redd.it/what-is-the-most-no-skill-survivor-in-your-opinion-v0-ojxehdkvnzxe1.png?width=640&crop=smart&auto=webp&s=f7b8b06b3ae5e1811069cd64826d90f7dc58543d',
+                placement: 'char',
+                description: 'A hardened veteran with battle scars from wars long ago. He has a tendency to sacrifice himself in order to keep those around him safe. With Guest\'s sturdiness, he can block, bash, and punch the killer to keep it away from harming his allies.',
+                stats: {
+                    "Difficulty": "★★★★☆",
+                    "Health": 115,
+                    "Regular Speed": 12,
+                    "Sprinting Speed": 24,
+                    "Max Stamina": 100,
+                    "Stamina Loss per sec": 10,
+                    "Stamina Gain per sec": 20
+                }
+            },
+            {
+                name: '007n7',
+                img: 'https://preview.redd.it/what-is-the-most-no-skill-survivor-in-your-opinion-v0-u5rm0dlvnzxe1.png?width=320&crop=smart&auto=webp&s=d8fa4ef4fd6107dc4bcaad9314b79f2e2d7258f2',
+                placement: 'char',
+                description: 'Previously infamous for their exploits, he had a change of heart after gaining a son, only to then lose him after a series of unfortunate events. With a smaller copy of the coolgui on him, he\'s able to teleport far in the map, as well as create a duplicate of himself if need be.',
+                stats: {
+                    "Difficulty": "★★★★☆",
+                    "Health": 100,
+                    "Regular Speed": 12,
+                    "Sprinting Speed": 24,
+                    "Max Stamina": 100,
+                    "Stamina Loss per sec": 10,
+                    "Stamina Gain per sec": 20
+                }
+            },
+            {
+                name: 'Taph',
+                img: 'https://preview.redd.it/what-is-the-most-no-skill-survivor-in-your-opinion-v0-fhqbq4jvnzxe1.png?width=320&crop=smart&auto=webp&s=2b60bad34b7618b65228bd5e6e1d04c4cafed76d',
+                placement: 'char',
+                description: 'A mute demolitionist who used to blow up & destroy the houses of terminated users at the will of Builderman. Uses Tripwires and Subspace Tripmines to reveal the position of and disorientate the Killer.',
+                stats: {
+                    "Difficulty": "★★★★☆",
+                    "Health": 90,
+                    "Regular Speed": 12,
+                    "Sprinting Speed": 24,
+                    "Max Stamina": 100,
+                    "Stamina Loss per sec": 10,
+                    "Stamina Gain per sec": 20
+                }
+            },
+
+            {
+                name: 'Killers',
+                placement: 'charSeparator'
+            },
 
 
-    {
-        name: 'Noob',
-        img: 'https://preview.redd.it/noob-render-d-v0-03sszvgxlzcf1.png?width=320&crop=smart&auto=webp&s=e8694b551f2b50dd503421fe2457e4102f2d3b4b'
-        , placement: 'char'
+            // Killers
+            {
+                name: 'Noli',
+                img: 'https://preview.redd.it/how-we-feeling-about-the-noli-redesign-v0-xau8s0wzwa3f1.jpg?width=640&crop=smart&auto=webp&s=b2a2462ef64db253a693c9e97def1a55464c03cf',
+                placement: 'char'
 
-    },
-    {
-        name: 'Shedletsky',
-        img: 'https://preview.redd.it/shedletsky-cosplay-skin-concept-v0-p6anrklzhx7f1.png?width=419&format=png&auto=webp&s=579529408534588ad48e38619b48510fb5c1735c'
-        , placement: 'char'
+            },
+            {
+                name: 'John Doe',
+                img: 'https://preview.redd.it/has-anyone-noticed-that-there-is-a-new-model-in-the-new-v0-mg6mfsz1rt6f1.png?width=439&format=png&auto=webp&s=ab8ed2adcc2ad115ecf23f5e274777829a80e3e8',
+                placement: 'char'
 
-    },
-    {
-        name: 'Chance',
-        img: 'https://preview.redd.it/i-made-chance-from-forsaken-rate-please-v0-cp840pxulofe1.png?width=320&crop=smart&auto=webp&s=a5373e4a114426ab71cc4800580dfa29fcc0f9d1'
-        , placement: 'char'
-    },
-    {
-        name: 'Two Time',
-        img: 'https://preview.redd.it/all-the-old-and-new-two-time-renders-made-by-yuyu-v0-hz5mbl4oulxe1.jpg?width=640&crop=smart&auto=webp&s=765bb23aeee6688880d83850132259f1eeeecaa1'
-        , placement: 'char'
+            },
+            {
+                name: 'Jason',
+                img: 'https://preview.redd.it/jason-is-totally-glitched-right-now-and-has-a-new-render-v0-yt98rmbmft6f1.png?width=2000&format=png&auto=webp&s=6831aaacde491c06ea2a5c4b59ec5fb05e35a919',
+                placement: 'char'
 
-    },
-    {
-        name: 'Dusekkar',
-        img: 'https://preview.redd.it/what-is-the-most-no-skill-survivor-in-your-opinion-v0-v0f79ljvnzxe1.png?width=640&crop=smart&auto=webp&s=ef3299fbaafdec01ae0cb0fdbb6075ac1f0be0ca'
-        , placement: 'char'
+            },
+            {
+                name: 'C00lkidd',
+                img: 'https://preview.redd.it/c00lkidd-render-remake-v0-xx42scrn696f1.png?width=512&format=png&auto=webp&s=57dd8397886a4bb2b285fe6dac093231c26b932d',
+                placement: 'char'
 
-    },
-    {
-        name: 'Builderman',
-        img: 'https://preview.redd.it/what-is-the-most-no-skill-survivor-in-your-opinion-v0-3pkf0djvnzxe1.png?width=640&crop=smart&auto=webp&s=81e88ca850650af7fe51bc62bc8830b9a8e8a1c3'
-        , placement: 'char'
+            },
+            {
+                name: '1x1x1x1',
+                img: 'https://i.redd.it/is-betrayed-1x1x1x1-male-or-female-v0-vpjkoc3333re1.png?width=417&format=png&auto=webp&s=a3438babad01abf6c135c0c1c651c44bcef273cc',
+                placement: 'char'
 
-    },
-    {
-        name: 'Elliot',
-        img: 'https://preview.redd.it/fanmade-elliot-render-cause-the-current-one-got-removed-v0-p739z4ixzh0f1.png?width=640&crop=smart&auto=webp&s=693c8d55952558194e009e35d7f102e0670474cb'
-        , placement: 'char'
+            },
 
-    },
-    {
-        name: 'Geust 1337',
-        img: 'https://preview.redd.it/what-is-the-most-no-skill-survivor-in-your-opinion-v0-ojxehdkvnzxe1.png?width=640&crop=smart&auto=webp&s=f7b8b06b3ae5e1811069cd64826d90f7dc58543d'
-        , placement: 'char'
+            {
+                name: 'Paradox.exe DC',
+                placement: 'contentSeparator'
+            },
 
-    },
-    {
-        name: '007n7',
-        img: 'https://preview.redd.it/what-is-the-most-no-skill-survivor-in-your-opinion-v0-u5rm0dlvnzxe1.png?width=320&crop=smart&auto=webp&s=d8fa4ef4fd6107dc4bcaad9314b79f2e2d7258f2'
-        , placement: 'char'
+            {
+                name: 'Survivors?',
+                placement: 'charSeparator'
+            },
 
-    },
-    {
-        name: 'Taph',
-        img: 'https://preview.redd.it/what-is-the-most-no-skill-survivor-in-your-opinion-v0-fhqbq4jvnzxe1.png?width=320&crop=smart&auto=webp&s=2b60bad34b7618b65228bd5e6e1d04c4cafed76d'
-        , placement: 'char'
+            {
+                name: 'NlSickle',
+                img: 'https://raw.githubusercontent.com/DummyDW-development/Drowse-Paradox.exe-DC/refs/heads/main/imgs/Nlsickle.svg',
+                placement: 'char'
 
-    },
+            },
+            {
+                name: 'NlBeary',
+                img: 'https://raw.githubusercontent.com/DummyDW-development/Drowse-Paradox.exe-DC/refs/heads/main/New%20Renders/NlBeary/Nlbeary.webp',
+                placement: 'char'
+            },
+            {
+                name: '☆ S M I L E ☆',
+                img: 'https://raw.githubusercontent.com/DummyDW-development/Drowse-Paradox.exe-DC/refs/heads/main/imgs/☆ S M I L E ☆.svg',
+                placement: 'char'
+            },
+            {
+                name: 'Cosmic Xin Error',
+                img: 'https://raw.githubusercontent.com/DummyDW-development/Drowse-Paradox.exe-DC/refs/heads/main/imgs/Cosmic.svg',
+                placement: 'char'
+            },
+            {
+                name: 'Silly Goober',
+                img: 'https://raw.githubusercontent.com/DummyDW-development/Drowse-Paradox.exe-DC/refs/heads/main/imgs/Silly Goober.svg',
+                placement: 'char'
+            },
+            {
+                name: 'Cosmia//Leah',
+                img: 'https://raw.githubusercontent.com/DummyDW-development/Drowse-Paradox.exe-DC/refs/heads/main/imgs/Cosmia-Leah.svg',
+                placement: 'char'
+            },
+            {
+                name: 'SashaRose',
+                img: 'https://raw.githubusercontent.com/DummyDW-development/Drowse-Paradox.exe-DC/refs/heads/main/New%20Renders/SashaRose/SashaRose.webp',
+                placement: 'char'
+            },
+            {
+                name: 'Asher Dasher',
+                img: 'https://raw.githubusercontent.com/DummyDW-development/Drowse-Paradox.exe-DC/refs/heads/main/imgs/Asher.svg',
+                placement: 'char'
+            },
+            {
+                name: 'Hauntuh/Emoji Man',
+                img: 'https://raw.githubusercontent.com/DummyDW-development/Drowse-Paradox.exe-DC/refs/heads/main/imgs/Hauntuh.svg',
+                placement: 'char'
+            },
+            {
+                name: 'Evadare/Kontos',
+                img: 'https://raw.githubusercontent.com/DummyDW-development/Drowse-Paradox.exe-DC/refs/heads/main/imgs/Evadare.svg',
+                placement: 'char'
+            },
+            {
+                name: 'Wanderer Orcaz',
+                img: 'https://raw.githubusercontent.com/DummyDW-development/Drowse-Paradox.exe-DC/refs/heads/main/New%20Renders/Wanderer/Wanderer.webp',
+                placement: 'char'
+            }
+        ];
 
-    { name: 'Killers', placement: 'charSeparator'},
+        const searchBtn = document.getElementById('searchBtn');
+        const searchInp = document.getElementById('searchInp');
+        const results = document.getElementById('results');
 
-
-    // Killers
-    {
-        name: 'Noli',
-        img: 'https://preview.redd.it/how-we-feeling-about-the-noli-redesign-v0-xau8s0wzwa3f1.jpg?width=640&crop=smart&auto=webp&s=b2a2462ef64db253a693c9e97def1a55464c03cf'
-        , placement: 'char'
-
-    },
-    {
-        name: 'John Doe',
-        img: 'https://preview.redd.it/has-anyone-noticed-that-there-is-a-new-model-in-the-new-v0-mg6mfsz1rt6f1.png?width=439&format=png&auto=webp&s=ab8ed2adcc2ad115ecf23f5e274777829a80e3e8'
-        , placement: 'char'
-
-    },
-    {
-        name: 'Jason',
-        img: 'https://preview.redd.it/jason-is-totally-glitched-right-now-and-has-a-new-render-v0-yt98rmbmft6f1.png?width=2000&format=png&auto=webp&s=6831aaacde491c06ea2a5c4b59ec5fb05e35a919'
-        , placement: 'char'
-
-    },
-    {
-        name: 'C00lkidd',
-        img: 'https://preview.redd.it/c00lkidd-render-remake-v0-xx42scrn696f1.png?width=512&format=png&auto=webp&s=57dd8397886a4bb2b285fe6dac093231c26b932d'
-        , placement: 'char'
-
-    },
-    {
-        name: '1x1x1x1',
-        img: 'https://i.redd.it/is-betrayed-1x1x1x1-male-or-female-v0-vpjkoc3333re1.png?width=417&format=png&auto=webp&s=a3438babad01abf6c135c0c1c651c44bcef273cc'
-        , placement: 'char'
-
-    },
-
-    { name: 'Paradox.exe DC', placement: 'contentSeparator'},
-
-    { name: 'Survivors?', placement: 'charSeparator'},
-
-    {
-        name: 'NlSickle',
-        img:'https://raw.githubusercontent.com/DummyDW-development/Drowse-Paradox.exe-DC/refs/heads/main/imgs/Nlsickle.svg'
-        , placement: 'char'
-
-    },
-    {
-        name: 'NlBeary',
-        img:'https://raw.githubusercontent.com/DummyDW-development/Drowse-Paradox.exe-DC/refs/heads/main/New%20Renders/NlBeary/Nlbeary.webp'
-        , placement: 'char'
-    },
-    {
-        name: '☆ S M I L E ☆',
-        img: 'https://raw.githubusercontent.com/DummyDW-development/Drowse-Paradox.exe-DC/refs/heads/main/imgs/☆ S M I L E ☆.svg'
-        , placement: 'char'
-    },
-    {
-        name: 'Cosmic Xin Error',
-        img:'https://raw.githubusercontent.com/DummyDW-development/Drowse-Paradox.exe-DC/refs/heads/main/imgs/Cosmic.svg'
-        , placement: 'char'
-    },
-    {
-        name: 'Silly Goober',
-        img:'https://raw.githubusercontent.com/DummyDW-development/Drowse-Paradox.exe-DC/refs/heads/main/imgs/Silly Goober.svg'
-        , placement: 'char'
-    },
-    {
-        name: 'Cosmia//Leah',
-        img:'https://raw.githubusercontent.com/DummyDW-development/Drowse-Paradox.exe-DC/refs/heads/main/imgs/Cosmia-Leah.svg'
-        , placement: 'char'
-    },
-    {
-        name: 'SashaRose',
-        img:'https://raw.githubusercontent.com/DummyDW-development/Drowse-Paradox.exe-DC/refs/heads/main/New%20Renders/SashaRose/SashaRose.webp'
-        , placement: 'char'
-    },
-    {
-        name: 'Asher Dasher',
-        img:'https://raw.githubusercontent.com/DummyDW-development/Drowse-Paradox.exe-DC/refs/heads/main/imgs/Asher.svg'
-        , placement: 'char'
-    },
-    {
-        name: 'Hauntuh/Emoji Man',
-        img:'https://raw.githubusercontent.com/DummyDW-development/Drowse-Paradox.exe-DC/refs/heads/main/imgs/Hauntuh.svg'
-        , placement: 'char'
-    },
-    {
-        name: 'Evadare/Kontos',
-        img:'https://raw.githubusercontent.com/DummyDW-development/Drowse-Paradox.exe-DC/refs/heads/main/imgs/Evadare.svg'
-        , placement: 'char'
-    },
-    {
-        name: 'Wanderer Orcaz',
-        img:'https://raw.githubusercontent.com/DummyDW-development/Drowse-Paradox.exe-DC/refs/heads/main/New%20Renders/Wanderer/Wanderer.webp'
-        , placement: 'char'
-    }
-];
-
-const searchBtn = document.getElementById('searchBtn');
-const searchInp = document.getElementById('searchInp');
-const results = document.getElementById('results');
-
-function displayResults(list) {
-  results.innerHTML = '';
-  list.forEach(c => {
-    if (c.placement === 'contentSeparator') {
-      const sep = document.createElement('div');
-      sep.className = 'content-separator';
-      sep.textContent = c.name;
-      results.appendChild(sep);
-    } else if (c.placement === 'charSeparator') {
-      const sep = document.createElement('div');
-      sep.className = 'category-separator';
-      sep.textContent = c.name;
-      results.appendChild(sep);
-    } else if (c.placement === 'char') {
-      const div = document.createElement('div');
-      div.className = 'result-item';
-      div.innerHTML = `
+        function displayResults(list) {
+            results.innerHTML = '';
+            list.forEach(c => {
+                if (c.placement === 'contentSeparator') {
+                    const sep = document.createElement('div');
+                    sep.className = 'content-separator';
+                    sep.textContent = c.name;
+                    results.appendChild(sep);
+                } else if (c.placement === 'charSeparator') {
+                    const sep = document.createElement('div');
+                    sep.className = 'category-separator';
+                    sep.textContent = c.name;
+                    results.appendChild(sep);
+                } else if (c.placement === 'char') {
+                    const div = document.createElement('div');
+                    div.className = 'result-item';
+                    div.innerHTML = `
         <img src="${c.img}" alt="${c.name}">
         <span>${c.name}</span>
         <button class="view-btn" data-name="${c.name}">View</button>
       `;
-      results.appendChild(div);
-    }
-  });
+                    results.appendChild(div);
+                }
+            });
 
-  document.querySelectorAll('.view-btn').forEach(btn => {
-    btn.addEventListener('click', e => {
-      const name = e.target.getAttribute('data-name');
-      alert(`Viewing details for: ${name}`);
-    });
-  });
-}
+            // Add event listeners to the newly created view buttons
+            document.querySelectorAll('.view-btn').forEach(btn => {
+                btn.addEventListener('click', e => {
+                    const name = e.target.getAttribute('data-name');
+                    const char = characters.find(c => c.name === name);
+                    if (char) {
+                        showCharacterStats(char);
+                    }
+                });
+            });
+        }
 
+        // MOVE THIS FUNCTION OUTSIDE displayResults
+        function showCharacterStats(char) {
+            results.classList.add('fade-out');
 
+            setTimeout(() => {
+                const viewDetails = document.getElementById('viewDetails');
 
-searchBtn.addEventListener('click', () => {
-    const query = searchInp.value.trim().toLowerCase();
-    if (!query) {
+                let statsHTML = `
+      <div class="character-header">
+        <h1>${char.name.toUpperCase()}</h1>
+      </div>
+      
+      <div class="character-content">
+        <div class="character-image">
+          <img src="${char.img}" alt="${char.name}" onerror="this.src='https://via.placeholder.com/300x400/333/fff?text=Image+Not+Found'">
+        </div>
+        
+        <div class="character-stats">
+          <h3>STATS</h3>
+          <div class="stats-grid">
+    `;
+
+                // Add stats in the exact order you want
+                const statOrder = [
+                    "Difficulty",
+                    "Health",
+                    "Regular Speed",
+                    "Sprinting Speed",
+                    "Max Stamina",
+                    "Stamina Loss per sec",
+                    "Stamina Gain per sec"
+                ];
+
+                statOrder.forEach(stat => {
+                    if (char.stats && char.stats[stat] !== undefined) {
+                        statsHTML += `
+                <div class="stat-row">
+                    <span class="stat-label">${stat}:</span>
+                    <span class="stat-value">${char.stats[stat]}</span>
+                </div>
+            `;
+                    }
+                });
+
+                statsHTML += `
+          </div>
+        </div>
+      </div>
+      
+      <div class="character-description">
+        <h3>GENERAL INFO</h3>
+        <p>${char.description}</p>
+      </div>
+    `;
+
+                viewDetails.innerHTML = statsHTML;
+                document.getElementById('viewPanel').classList.add('active');
+            }, 400);
+        }
+        searchBtn.addEventListener('click', () => {
+            const query = searchInp.value.trim().toLowerCase();
+            if (!query) {
+                displayResults(characters);
+                return;
+            }
+            const filtered = characters.filter(c => c.name.toLowerCase().includes(query));
+            displayResults(filtered);
+        });
+
+        // Show all by default
         displayResults(characters);
-        return;
-    }
-    const filtered = characters.filter(c => c.name.toLowerCase().includes(query));
-    displayResults(filtered);
-});
 
-// Show all by default
-displayResults(characters);
+        // REMOVE THIS DUPLICATE EVENT LISTENER - it's already handled inside displayResults
+        /*
+        document.querySelectorAll('.view-btn').forEach(btn => {
+          btn.addEventListener('click', e => {
+            const name = e.target.getAttribute('data-name');
+            const char = characters.find(c => c.name === name);
 
-document.querySelectorAll('.view-btn').forEach(btn => {
-  btn.addEventListener('click', e => {
-    const name = e.target.getAttribute('data-name');
-    const char = characters.find(c => c.name === name);
+            results.classList.add('fade-out');
 
-    results.classList.add('fade-out');
+            setTimeout(() => {
+              const img = new Image();
+              img.src = char.img;
+              img.alt = char.name;
 
-    setTimeout(() => {
-      const img = new Image();
-      img.src = char.img;
-      img.alt = char.name;
+              img.onload = () => {
+                // ... your old image loading code ...
+              };
+            }, 400);
+          });
+        });
+        */
 
-      img.onload = () => {
-        const fixedHeight = 300; // desired fixed height of container & image
-
-     
-// Determine max height for images: 300px or half of viewport height, whichever is smaller
-const maxHeight = Math.min(300, window.innerHeight * 0.5);
-// Determine max width for images: 98vw to avoid horizontal overflow
-const maxWidth = window.innerWidth * 0.98;
-
-// Calculate scaled width preserving aspect ratio
-const scale = maxHeight / img.naturalHeight;
-let scaledWidth = img.naturalWidth * scale;
-if (scaledWidth > maxWidth) {
-  // Rescale if width would overflow viewport
-  scaledWidth = maxWidth;
-}
-
-// Create wrapper div with dynamic width & fixed height
-const wrapper = document.createElement('div');
-wrapper.style.height = maxHeight + 'px';
-wrapper.style.width = scaledWidth + 'px';
-wrapper.style.maxWidth = maxWidth + 'px';
-wrapper.style.margin = '20px auto';
-wrapper.style.border = '2px solid white';
-wrapper.style.borderRadius = '10px';
-wrapper.style.overflow = 'hidden';
-wrapper.style.backgroundColor = '#111';
-wrapper.style.display = 'flex';
-wrapper.style.justifyContent = 'center';
-wrapper.style.alignItems = 'center';
-
-// Style image to have 100% height, auto width (maintain aspect)
-img.style.height = maxHeight + 'px';
-img.style.width = 'auto';
-img.style.maxWidth = '98vw';
-img.style.objectFit = 'contain';
-        wrapper.appendChild(img);
-
-        // Insert into viewDetails
-        const viewDetails = document.getElementById('viewDetails');
-        viewDetails.innerHTML = `<h2>${char.name}</h2>`;
-        viewDetails.appendChild(wrapper);
-        viewDetails.innerHTML += `<p>More stats/info about ${char.name} here...</p>`;
-
-        document.getElementById('viewPanel').classList.add('active');
-      };
-
-      img.onerror = () => {
-        document.getElementById('viewDetails').innerHTML = `
-          <h2>${char.name}</h2>
-          <p>Image failed to load.</p>
-        `;
-        document.getElementById('viewPanel').classList.add('active');
-      };
-    }, 400);
-  });
-});
-
-// Close button logic
-document.getElementById('closeView').addEventListener('click', () => {
-  document.getElementById('viewPanel').classList.remove('active');
-  setTimeout(() => {
-    results.classList.remove('fade-out');
-  }, 500); // wait for panel to slide down
-});
+        // Close button logic
+        document.getElementById('closeView').addEventListener('click', () => {
+            document.getElementById('viewPanel').classList.remove('active');
+            setTimeout(() => {
+                results.classList.remove('fade-out');
+            }, 500);
+        });
