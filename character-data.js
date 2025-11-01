@@ -10,6 +10,13 @@
                 placement: 'charSeparator'
             },
 
+                {
+                        name: 'Veronica',
+                        img: '',
+                        placement: 'char',
+                },
+                
+
             {
                 name: 'Noob',
                 img: 'https://preview.redd.it/noob-render-d-v0-03sszvgxlzcf1.png?width=320&crop=smart&auto=webp&s=e8694b551f2b50dd503421fe2457e4102f2d3b4b',
