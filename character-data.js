@@ -200,7 +200,7 @@ stats: {
 "Difficulty": "★★★☆☆",
 
 "Health": 2500,
-"Regular Speed": "To be update...",
+"Regular Speed": 8,
 "Sprinting Speed": 27,
 "Max Stamina": 110,
 "Stamina Loss per sec": 9,
