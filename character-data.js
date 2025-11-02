@@ -200,7 +200,7 @@ stats: {
 "Difficulty": "★★★☆☆",
 
 "Health": 2500,
-"Regular Speed": 8,
+"Regular Speed": "To be update...",
 "Sprinting Speed": 27,
 "Max Stamina": 110,
 "Stamina Loss per sec": 9,
@@ -277,7 +277,12 @@ stats: {
             {
                 name: 'SashaRose',
                 img: 'https://raw.githubusercontent.com/DummyDW-development/Drowse-Paradox.exe-DC/refs/heads/main/New%20Renders/SashaRose/SashaRose.webp',
-                placement: 'char'
+                placement: 'char',
+                skins: [
+              { name: 'Pink Theme', img: 'https://github.com/Drowsey-Works/Drowse-Paradox.exe-DC/blob/main/New%20Renders/SashaRose/SashaRose(pink%20themed%20skin).webp?raw=true' },
+                  { name: 'Purple Theme', img: 'https://github.com/Drowsey-Works/Drowse-Paradox.exe-DC/blob/main/New%20Renders/SashaRose/SashaRose(purple,%20skin).webp?raw=true' },
+                  { name: 'Placeholder', img: 'https://openclipart.org/image/800px/194077' }
+              ]
             },
             {
                 name: 'Asher Dasher',
