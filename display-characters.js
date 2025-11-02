@@ -41,12 +41,29 @@
 
         // MOVE THIS FUNCTION OUTSIDE displayResults
         function showCharacterStats(char) {
-            results.classList.add('fade-out');
+    results.classList.add('fade-out');
 
-            setTimeout(() => {
-                const viewDetails = document.getElementById('viewDetails');
+    setTimeout(() => {
+        const viewDetails = document.getElementById('viewDetails');
 
-                let statsHTML = `
+        // Dynamic stat order - only show what exists for each character
+        const baseStatOrder = [
+            "Difficulty",
+            "Health", 
+            "Regular Speed",
+            "Sprinting Speed", 
+            "Max Stamina",
+            "Stamina Loss per sec",
+            "Stamina Gain per sec",
+            "Terror Radius"  // Will only show if the character has this stat
+        ];
+
+        // Filter to only include stats that actually exist for this character
+        const statOrder = baseStatOrder.filter(stat => 
+            char.stats && char.stats[stat] !== undefined
+        );
+
+        let statsHTML = `
       <div class="character-header">
         <h1>${char.name.toUpperCase()}</h1>
       </div>
@@ -61,43 +78,31 @@
           <div class="stats-grid">
     `;
 
-                // Add stats in the exact order you want
-                const statOrder = [
-                    "Difficulty",
-                    "Health",
-                    "Regular Speed",
-                    "Sprinting Speed",
-                    "Max Stamina",
-                    "Stamina Loss per sec",
-                    "Stamina Gain per sec"
-                ];
-
-                statOrder.forEach(stat => {
-                    if (char.stats && char.stats[stat] !== undefined) {
-                        statsHTML += `
+        // Now only display stats that this character actually has
+        statOrder.forEach(stat => {
+            statsHTML += `
                 <div class="stat-row">
                     <span class="stat-label">${stat}:</span>
                     <span class="stat-value">${char.stats[stat]}</span>
                 </div>
             `;
-                    }
-                });
+        });
 
-                statsHTML += `
+        statsHTML += `
           </div>
         </div>
       </div>
       
       <div class="character-description">
         <h3>GENERAL INFO</h3>
-        <p>${char.description}</p>
+        <p>${char.description || 'No description available.'}</p>
       </div>
     `;
 
-                viewDetails.innerHTML = statsHTML;
-                document.getElementById('viewPanel').classList.add('active');
-            }, 400);
-        }
+        viewDetails.innerHTML = statsHTML;
+        document.getElementById('viewPanel').classList.add('active');
+    }, 400);
+}
 // Add search on input (better UX)
 searchInp.addEventListener('input', (e) => {
     const query = e.target.value.trim().toLowerCase();
