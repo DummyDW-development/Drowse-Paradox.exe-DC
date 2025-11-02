@@ -1,4 +1,3 @@
-
         const searchBtn = document.getElementById('searchBtn');
         const searchInp = document.getElementById('searchInp');
         const results = document.getElementById('results');
@@ -99,40 +98,33 @@
                 document.getElementById('viewPanel').classList.add('active');
             }, 400);
         }
-        searchBtn.addEventListener('click', () => {
-            const query = searchInp.value.trim().toLowerCase();
-            if (!query) {
-                displayResults(characters);
-                return;
-            }
-            const filtered = characters.filter(c => c.name.toLowerCase().includes(query));
-            displayResults(filtered);
-        });
+// Add search on input (better UX)
+searchInp.addEventListener('input', (e) => {
+    const query = e.target.value.trim().toLowerCase();
+    if (!query) {
+        displayResults(characters);
+        return;
+    }
+    const filtered = characters.filter(c => c.name.toLowerCase().includes(query));
+    displayResults(filtered);
+});
+
+// Add keyboard support
+searchInp.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') searchBtn.click();
+});
+
+// Add escape key to close panel
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        document.getElementById('viewPanel').classList.remove('active');
+        results.classList.remove('fade-out');
+    }
+});
 
         // Show all by default
         displayResults(characters);
 
-        // REMOVE THIS DUPLICATE EVENT LISTENER - it's already handled inside displayResults
-        /*
-        document.querySelectorAll('.view-btn').forEach(btn => {
-          btn.addEventListener('click', e => {
-            const name = e.target.getAttribute('data-name');
-            const char = characters.find(c => c.name === name);
-
-            results.classList.add('fade-out');
-
-            setTimeout(() => {
-              const img = new Image();
-              img.src = char.img;
-              img.alt = char.name;
-
-              img.onload = () => {
-                // ... your old image loading code ...
-              };
-            }, 400);
-          });
-        });
-        */
 
         // Close button logic
         document.getElementById('closeView').addEventListener('click', () => {
@@ -141,4 +133,3 @@
                 results.classList.remove('fade-out');
             }, 500);
         });
-
