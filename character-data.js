@@ -44,7 +44,7 @@
             },
             {
                 name: 'Shedletsky',
-                img: 'https://raw.githubusercontent.com/DummyDW-development/Drowse-Paradox.exe-DC/refs/heads/main/imgs/300px-Shedletsky_Render.webp',
+                img: 'https://github.com/DummyDW-development/Drowse-Paradox.exe-DC/blob/main/imgs/300px-Shedletsky_Render.webp?raw=true',
                 placement: 'char',
                 description: 'Description for Shedletsky...',
                 stats: {
