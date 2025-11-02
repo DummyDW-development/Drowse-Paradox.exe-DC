@@ -44,7 +44,7 @@
             },
             {
                 name: 'Shedletsky',
-                img: 'https://preview.redd.it/shedletsky-cosplay-skin-concept-v0-p6anrklzhx7f1.png?width=419&format=png&auto=webp&s=579529408534588ad48e38619b48510fb5c1735c',
+                img: 'https://raw.githubusercontent.com/DummyDW-development/Drowse-Paradox.exe-DC/refs/heads/main/imgs/300px-Shedletsky_Render.webp',
                 placement: 'char',
                 description: 'Description for Shedletsky...',
                 stats: {
