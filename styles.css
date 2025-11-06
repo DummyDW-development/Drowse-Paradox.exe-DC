@@ -1,4 +1,4 @@
-        @import url('https://fonts.cdnfonts.com/css/accanthis-adf-std');
+       @import url('https://fonts.cdnfonts.com/css/accanthis-adf-std');
 
 
         * {
@@ -784,4 +784,112 @@
 .skins-grid.auto-height {
     max-height: none;
     overflow-y: visible;
+}
+
+/* Character Abilities Styles */
+.character-abilities {
+    margin-top: 25px;
+}
+
+.passives-section,
+.abilities-section {
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.passives-section h3,
+.abilities-section h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 8px;
+    font-size: 1.5rem;
+}
+
+/* Passives List */
+.passives-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.passive-item {
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    line-height: 1.4;
+}
+
+.passive-item strong {
+    color: #fff;
+    display: block;
+    margin-bottom: 4px;
+}
+
+/* Abilities List */
+.abilities-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.ability-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.ability-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.ability-icon {
+    width: 40px;
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.ability-name {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: white;
+}
+
+.ability-description {
+    margin: 0;
+    line-height: 1.4;
+    color: #ccc;
+}
+
+.ability-divider {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 10px 0;
+}
+
+/* Mobile Responsive for Abilities */
+@media (max-width: 768px) {
+    .passives-section,
+    .abilities-section {
+        padding: 15px;
+    }
+    
+    .ability-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .ability-icon {
+        width: 35px;
+        height: 35px;
+    }
 }
