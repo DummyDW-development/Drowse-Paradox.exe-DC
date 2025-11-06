@@ -21,6 +21,7 @@ const characterAbilities = {
                name: "Slateskin Potion",
                icon: "",
                description: "Gain the Slateskin II effect for 8s, getting 80 overheal and slowness. If the effect comes off naturally gain Speed II for 3s, if you end it early you get Speed I instead."
+          }
        ]
    },
    "Shedletsky": {
