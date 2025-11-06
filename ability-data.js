@@ -1,52 +1,4 @@
 const characterAbilities = {
-   "Veronica": {
-       passives: [
-           {
-               name: "Robotic Resilience",
-               description: "Veronica takes 15% less damage from all sources and recovers from stuns 25% faster."
-           },
-           {
-               name: "Energy Core",
-               description: "Regenerates 1% of max health every 3 seconds when out of combat."
-           }
-       ],
-       abilities: [
-           {
-               name: "Rapid Retreat",
-               icon: "https://example.com/veronica-ability1.png",
-               description: "Quickly dash forward, becoming invulnerable for 0.5 seconds. 15 second cooldown."
-           },
-           {
-               name: "System Overdrive",
-               icon: "https://example.com/veronica-ability2.png",
-               description: "Increase movement speed by 30% and damage by 20% for 6 seconds. 45 second cooldown."
-           }
-       ]
-   },
-   "Guest 666": {
-       passives: [
-           {
-               name: "Blood Frenzy",
-               description: "Deal 10% more damage for each injured survivor within 20 meters."
-           },
-           {
-               name: "Unholy Presence",
-               description: "Survivors within your terror radius have their action speeds reduced by 15%."
-           }
-       ],
-       abilities: [
-           {
-               name: "Demonic Charge",
-               icon: "https://example.com/guest666-ability1.png",
-               description: "Lunge forward, dealing damage to the first survivor hit. 12 second cooldown."
-           },
-           {
-               name: "Soul Harvest",
-               icon: "https://example.com/guest666-ability2.png",
-               description: "Consume the souls of downed survivors to permanently increase your movement speed by 5%. 60 second cooldown."
-           }
-       ]
-   },
    "Noob": {
        passives: [
            {
@@ -64,7 +16,11 @@ const characterAbilities = {
                name: "Cola Rush",
                icon: "https://example.com/noob-ability2.png",
                description: "Increase movement speed by 25% for 4 seconds. 30 second cooldown."
-           }
+           },
+          {
+               name: "Slateskin Potion",
+               icon: "",
+               description: "Gain the Slateskin II effect for 8s, getting 80 overheal and slowness. If the effect comes off naturally gain Speed II for 3s, if you end it early you get Speed I instead."
        ]
    },
    "Shedletsky": {
